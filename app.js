@@ -1,271 +1,221 @@
-var br = "</br>";
-//Task 1 --->
-var userName = prompt("Please Enter Your Name", "Name");
-alert("Hi, " + userName);
-//Task 2 --->
-var num = +prompt("Enter a number to print it's multiplication table : ", 2);
-document.write("</br>" + num + " X 1 = " + num * 1);
-document.write("</br>" + num + " X 2 = " + num * 2);
-document.write("</br>" + num + " X 3 = " + num * 3);
-document.write("</br>" + num + " X 4 = " + num * 4);
-document.write("</br>" + num + " X 5 = " + num * 5);
-document.write("</br>" + num + " X 6 = " + num * 6);
-document.write("</br>" + num + " X 7 = " + num * 7);
-document.write("</br>" + num + " X 8 = " + num * 8);
-document.write("</br>" + num + " X 9 = " + num * 9);
-document.write("</br>" + num + " X 10 = " + num * 10);
-//Task 3 --->
-var cityName = prompt("Please Enter Your City: ", "Karachi");
-if(cityName == "Karachi"){
-    alert("Welcome To the City Of Lights...");
-
+var br = "</br>"
+    /*1. Declare an empty array using JS literal notation to store
+    student names in future. */
+var studentNames = [];
+/*2. Declare an empty array using JS object notation to store
+student names in future. */
+//-----Skipped
+/*3. Declare and initialize a strings array. */
+var stringsArray = ["Mumtaz", "Shahzaib", "Faiyaz", "Basit", "Owais"];
+/*4. Declare and initialize a numbers array.*/
+var numbersArray = [1, 22, 34, 55, 68];
+/*5. Declare and initialize a boolean array.*/
+var boolArray = [true, false];
+/* 6. Declare and initialize a mixed array. */
+var mixArray = ["Mumtaz Ahmed", "22", true];
+/*7. Declare and Initialize an array and store available mobile
+networks in Pakistan. */
+var networksPakistan = ["Telenor", "Jazz", "Waird", "Zong", "Ufone"]
+    /*8. Declare and Initialize an array and store available education
+    qualifications in Pakistan (e.g. SSC, HSC, BCS, BS, BCOM, MS,
+    M. Phil., PhD). Show the listed qualifications in your browser
+    like:*/
+var eduPakistan = ["SSC", "HSC", "BSC", "BS", "BE", "MS", "ME", "M.Phil", "P.hD"];
+document.write("<b>Qualifications in Pakistan:</b>" + br + br);
+document.write("1) " + eduPakistan[0] + br);
+document.write("2) " + eduPakistan[1] + br);
+document.write("3) " + eduPakistan[2] + br);
+document.write("4) " + eduPakistan[3] + br);
+document.write("5) " + eduPakistan[4] + br);
+document.write("6) " + eduPakistan[5] + br);
+document.write("7) " + eduPakistan[6] + br);
+document.write("8) " + eduPakistan[7] + br + br);
+/*9. Declare and initialize an empty array to store top movies of
+2015. Add movies one by one in an array. Display the elements
+& length of array in your browser. (Use array’s length method) */
+var movies15 = [];
+movies15[0] = "Avengers: Age of Ultron";
+movies15[1] = "Spetre";
+movies15[2] = "Jurrasic World";
+movies15[3] = "Inside Out";
+document.write("<b>Top Movies of 2015:</b>" + br);
+document.write("1) " + movies15[0] + br);
+document.write("2) " + movies15[1] + br);
+document.write("3) " + movies15[2] + br);
+document.write("4) " + movies15[3] + br);
+document.write("<b>The length of the Array: " + movies15.length + "</b>" + br + br);
+/*10. Declare and Initialize an array with your favorite cars. Show
+a. First index of the array
+b. Car at first index of the array
+c. Last index of the array
+d. Car at last index of the array*/
+var favCars = ["Honda Civic", "Ford Mustang", "Dodge Charger", "Chervolet Camaro"];
+document.write("<b>Favorite Cars:</b> " + br);
+document.write("First Index of the Array: 0" + br);
+document.write("Car at the first index of the Array: " + favCars[0] + br);
+document.write("Last index of the array: 3" + br);
+document.write("Car at last index of the Array: " + favCars[3] + br + br);
+/* 11. Write a program to store 3 student names in an array. Take
+another array to store score of these three students. Assume
+that total marks are 500 for each student, display the scores &
+percentages of students like:*/
+var stuName = ["Ali", "Shahzaib", "Muzammil"];
+var stuScore = [450, 480, 400];
+var totalScore = 500;
+document.write("Score of " + stuName[0] + " is " + stuScore[0] + " & the percentage is: " + ((stuScore[0] / totalScore) * 100) + "%" + br);
+document.write("Score of " + stuName[1] + " is " + stuScore[1] + " & the percentage is: " + ((stuScore[1] / totalScore) * 100) + "%" + br);
+document.write("Score of " + stuName[2] + " is " + stuScore[2] + " & the percentage is: " + ((stuScore[2] / totalScore) * 100) + "%" + br);
+/*12. Initialize an array with color names. Display the array
+elements in your browser.
+a. Ask the user what color he/she wants to add to the
+beginning & add that color to the beginning of the array.
+Display the updated array in your browser.
+b. Ask the user what color he/she wants to add to the end &
+add that color to the end of the array. Display the updated
+array in your browser.
+c. Add two more color to the beginning of the array. Display
+the updated array in your browser.
+ d. Delete the first color in the array. Display the updated
+array in your browser.
+e. Delete the last color in the array. Display the updated
+array in your browser.
+f. Ask the user at which index he/she wants to add a color &
+color name. Then add the color to desired position/index. Display the updated array in your browser.
+g. Ask the user at which index he/she wants to delete
+color(s) & how many colors he/she wants to delete. Then
+remove the same number of color(s) from user-defined
+position/index. . Display the updated array in your
+browser.*/
+//Task a
+var colors = ["Red", "Blue", "Green", "Yellow"];
+alert(colors);
+var desireStartColorUser = prompt("Enter the color you want at the beginning: ");
+if (desireStartColorUser == "Blue") {
+    // alert(colors[1]+" "+colors[0]+" "+colors[2]);
+    colors.shift();
+    colors.push("Red");
+    alert(colors);
+} else if (desireStartColorUser == "Red") {
+    // alert(colors[0]+" "+colors[1]+" "+colors[2]);
+    alert(colors);
+} else if (desireStartColorUser == "Green") {
+    // alert(colors[2]);
+    colors.splice(2, 1);
+    colors.unshift("Green");
+    alert(colors);
+} else if (desireStartColorUser == "Yellow") {
+    colors.unshift("Yellow");
+    colors.pop();
+    alert(colors);
+} else {
+    alert("Try Again!");
 }
-else{
-    alert("Welcome To " + cityName);
+//Task b
+var colors = ["Red", "Blue", "Green", "Yellow"];
+var desireEndColorUser = prompt("Enter the color you want to the end: ")
+if (desireEndColorUser == "Red") {
+    colors.push(colors[0]);
+    colors.shift();
+    alert(colors);
+} else if (desireEndColorUser == "Blue") {
+    colors.push(colors[1]);
+    colors.splice(1, 1);
+    alert(colors);
+} else if (desireEndColorUser == "Green") {
+    colors.push(colors[2]);
+    colors.splice(2, 1);
+    alert(colors);
+} else if (desireEndColorUser == "Yellow") {
+    alert(colors);
+} else {
+    alert("Try Again!");
 }
-//Task 4 --->
-var gender = prompt("What's your gender?", "gender");
-if (gender == "male"){
-    alert("Greetings Sir!");
+//Task c
+colors.unshift("Megenta", "Purple");
+alert("After adding two new colors, here is the updated array:\n" + colors);
+//Task d
+colors.shift();
+alert("After deleting the first color, the updated array is:\n " + colors);
+//Task e
+colors.pop();
+alert("After deleting the last color, the updated array is: \n" + colors);
+//Task f
+var userAddIndexNum = +prompt("Enter the index at which you want to add the color:", "0");
+var userAddColor = prompt("Enter the Name of the color:", "Color");
+colors.splice(userAddIndexNum, 0, userAddColor);
+alert(colors);
+//Task g
+var userRemoveIndexNum = +prompt("Enter the index from which you want to delete the color: ", "0");
+var userNoOfIndexRemoveNum = +prompt("Enter the no. of colors you want to remove from the current index: ", "0");
+alert(colors);
+/*3. Write a program to store student scores in an array & sort
+the array in ascending order using Array’s sort method. */
+var studentScoreArray = [46, 86, 13, 26, 78, 98, 45, 21, 12, 32, 65, 44, 65];
+document.write(br + "<b>This is an Array of student scores:</b> " + br + studentScoreArray + br);
+var ascendingSortedScoreArray = studentScoreArray.sort(function(a, b) {
+    return a - b
+});
+document.write("<b>And this is the same Array sorted in ascending order(using array sort method):</b> " + br + ascendingSortedScoreArray + br);
+/*14. Write a program to sort the below mentioned array: */
+var fruits = ["Strawberry", "Apple", "Orange", "Banana"];
+document.write("<b>This is an Array of Fruits:</b> " + br + fruits + br + br);
+var sortedFruits = fruits.sort();
+fruits.reduceRight;
+document.write("<b>This is the same Array but sorted(using sort and reduceRight function)</b>" + br + sortedFruits + br);
+/*15. Write a program to initialize an array with city names. Copy
+3 array elements from cities array to selectedCities array. */
+var citiesArray = ["Karachi", "Hyderabad", "Sukkur", "Islamabad", "Quetta", "Lahore"];
+var selectedCitiesArray = citiesArray.slice(2, 4);
+document.write("<b>Cities List:</b>" + br + citiesArray + br);
+document.write("<b>Selected Cities List:</b>" + br + selectedCitiesArray + br + br);
+/*16. Write a program to create a single string from the below
+mentioned array:
+var arr = [“This ”, “ is ”, “ my ”, “ cat”];
+(Use array’s join method) */
+var arrCat = ["This", "is", "my", "cat"];
+document.write("<b>Array:</b> " + br + arrCat + br);
+document.write("<b>String:</b> " + br + arrCat.join(" ") + br + br);
+/*17. Create a new array. Store values one by one in such a way
+that you can access the values in the order in which they were
+stored. (FIFO-First In First Out) */
+var arrFifoDevices = ["Keyboard", "Mouse", "Printer", "Monitor"];
+document.write("<b>Devices:</b>" + br + arrFifoDevices + br);
+for (var i = 0; i <= arrFifoDevices.length - 1; i++) {
+    document.write("Out :" + br + arrFifoDevices[i] + br);
 }
-else if (gender == "female")
-{
-    alert("Greetings Ma'am");
+/*18. Create a new array. Store values one by one in such a way
+that you can access the values in reverse order. (Last In-First
+Out) */
+var arrLifoDevices = [];
+arrLifoDevices.push("Keyboard");
+arrLifoDevices.push("Mouse");
+arrLifoDevices.push("Printer");
+arrLifoDevices.push("Monitor");
+document.write(br + "<b>Devices(LIFO) :</b>" + br + arrLifoDevices);
+document.write(br + "Out" + br + arrLifoDevices.pop());
+document.write(br + "Out" + br + arrLifoDevices.pop());
+document.write(br + "Out" + br + arrLifoDevices.pop());
+document.write(br + "Out" + br + arrLifoDevices.pop());
+/*19. Write a program to store phone manufacturers (Apple,
+Samsung, Motorola, Nokia, Sony & Haier) in an array. Display
+the following dropdown/select menu in your browser using
+document.write() method: */
+var arrMoiles = ["Apple", "Samsung", "Motorola", "Nokia"];
+document.write(br + '<select name="devices"> <option value="Apple">' + arrMoiles[0] + '</option> <option value="Samsung">' + arrMoiles[1] + '</option><option value="Motorola">' + arrMoiles[2] + '</option><option value="Nokia">' + arrMoiles[3] + '</option></select>' + br + br);
+/*20. Declare and initialize an empty multidimensional array.
+(Array of arrays) */
+var arrmulti = [
+    [],
+    [],
+    []
+];
+/*21. Declare and initialize a multidimensional array representing
+the following matrix: */
+var arrmulti2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+for (var j = 0; j <= arrmulti2.length - 1; j++) {
+    document.write(arrmulti2[j] + br);
 }
-else{
-    alert("Greetings");
-}
-// Task 5 --->
-var SignalColor = prompt("Please Enter the Signal Color: (red, yellow or green)");
-if (SignalColor == "red"){
-    alert("Vehicles Must Stop!");
-}
-else if(SignalColor == "yellow"){
-    alert("Vehicles should get ready to move!");
-}
-else if (SignalColor == "green"){
-    alert("Vehicles Can Move Now!");
-}
-//Task 6 --->
-var maxAge = +prompt("Enter Max Age: ", "default");
-var currentAge = +prompt("Enter Current Age: ", "default");
-if (currentAge <= maxAge){
-    alert("You are Welcome...");    
-}
-else{
-    alert("Wrong Input");
-} 
-//Task 7 --->
-var fuel = +prompt("Enter remaining fuel in the car: ", "5litres");
-if (fuel < 0.25){
-    alert("You must refill");
-}
-else{
-    alert("It is fine");
-}
-// Task 9 Percentage Calculator ----->
-var subjMaths = +prompt("Enter the marks you obtained in Maths: ");
-var subjEnglish = +prompt("Enter the marks you obtained in English: ");
-var subjScience = +prompt("Enter the marks you obtained in Science: ");
-var subjTotalMakrs = +prompt("Enter total marks:");
-var TotalPercentage = ((subjMaths + subjEnglish + subjScience) / subjTotalMakrs ) * 100;
-// alert(TotalPercentage + "%");
-document.write(br);
-document.write("Makrs Sheet: ")
-document.write(br);
-document.write(br);
-document.write("Total Marks: " + subjTotalMakrs);
-document.write(br);
-document.write("Marks Obtained: " + (subjMaths + subjEnglish + subjScience));
-document.write(br);
-document.write("Percentage: " + TotalPercentage +"%");
-document.write(br);
- if (TotalPercentage >= 80 && TotalPercentage <= 100)
-{ document.write("Grade: A-one"); }
-else if (TotalPercentage >= 70 && TotalPercentage <= 79) {
-    document.write("Grade: A")
-}
-else if (TotalPercentage > 60 || TotalPercentage == 60) {
-document.write("Grade: B")
-}
-else{
-    document.write("Grade: Fail!")
-}
-document.write(br);
- if (TotalPercentage >= 80 && TotalPercentage <= 100)
-{ document.write("Remarks: Excellent"); }
-else if (TotalPercentage >= 70 && TotalPercentage <= 79) {
-    document.write("Remarks: Good")
-}
-else if (TotalPercentage > 60 || TotalPercentage == 60) {
-document.write("Remarks: You need to improve")
-}
-else{
-    document.write("Remarks: Sorry")
-}
-//Task 11 Secret Number game--------->
-var secretVar = 7;
-var guessVar = +prompt("Guess a number:(From 1 to 10) ", "1");
-if (guessVar == 7){
-    alert("Bingo! Correct Answer......");
-}
-else if(guessVar == 6 || guessVar == 8){
-    alert("Ohh.. You were very near to the correct answer..")
-}
-else{
-    alert("Try Again!!")
-}
-//Task 12 Number checker
-var numDivedent = +prompt("Enter any number: ", "15");
-if (numDivedent % 3 == 0){
-    alert("This number is divisible by 3")
-} 
-else{
-    alert("This number is not divisible by 3")
-}
-//Task 13
-var nameTeamA = prompt("Enter the name of first team: ", "Team A");
-var nameTeamB = prompt("Enter the name of second team: ", "Team B");
-var scoreTeamA = +prompt("Enter the score of first team: ", "10");
-var scoreTeamB = +prompt("Enter the score of second team: ", "10");
-if(scoreTeamA > scoreTeamB){
-    alert(nameTeamA + " have won the game")
-}
-else if(scoreTeamB > scoreTeamA){
-    alert(nameTeamB + " have won the game")
-} 
-else("Try Again!")
-//Task 14
-var chNumber;
-var chString;
-var chBool;
-var typeChecker = prompt("Enter a value: ", "true");
-if (typeof typeChecker == "boolen"){
-    alert(typeChecker + " is a boolen");
-}
-else if(typeof typeChecker == "number"){
-    alert(typeChecker + " is a number");
-}
-else if(typeof typeChecker == "string"){
-    alert(typeChecker + " is a string");
-}
-else{
-    alert("Try Again!")
-}
-//Task 15 --->
-var EvenorOdd = +prompt("Enter to check a number if it's even or odd: ", "15");
-if (EvenorOdd % 2 == 0){
-    alert(EvenorOdd + ": is an even number");
-}
-
-else{
-    alert(EvenorOdd + ": is an odd number");
-}
-var _weather = +prompt("Enter the tempreture: ", "40");
-if (_weather >= 40){
-    alert("It is too hot outside");
-}
-else if(_weather >= 30){
-    alert("The weather today is normal");
-}
-else if(_weather >= 20){
-    alert("Today's weather is cool");
-}
-else if(_weather >= 10 || _weather <= 10)
-{
-    alert("OMG! Today's weather is so cool")
-}
-else("Try Again!")
-//Task 17 simple Calculator using if-else statements:
-var firstNumber = +prompt("Enter the first number: ");
-var secondNumber = +prompt("Enter the second number: ");
-var operation = prompt("Enter the operation you want to perform: (i.e + - / * %)");
-if (operation == "*"){
-    alert(firstNumber * secondNumber);
-}
-else if(operation == "/"){
-    alert( firstNumber + " / " + secondNumber + " = " + firstNumber / secondNumber);
-}
-else if(operation == "+"){
-    alert(firstNumber + " + " + secondNumber + " = " +  firstNumber + secondNumber);
-}
-else if(operation == "-"){
-    alert( firstNumber + " - " + secondNumber + " = " + firstNumber - secondNumber);
-}
-else if(operation == "%"){
-    alert( firstNumber + " % " + secondNumber + " = " + firstNumber % secondNumber)
-}
-else{
-   alert("Please enter the correct input"); 
-}
-//Task 18 --->
-var weekDays = prompt("Please enter the name of any day of a week: ", "Monday");
-if (weekDays == "Monday" 
-|| weekDays == "Tuesday" 
-|| weekDays == "Wednesday" 
-|| weekDays == "Thursday" 
-|| weekDays == "Friday"){
-    alert("It's a week day")
-}
-else if(weekDays == "Saturday")
-{
-    alert("It's a weekend");
-}
-else if(weekDays == "Sunday"){
-    alert("Yay! It's a holiday")
-}
-else{
-    alert("Please enter the correct input")
-}
-//Task 19 --->
-var userScore = +prompt("Please enter your score: ", "45");
-if (userScore > 50){
-    alert("Your are Passed");
-}
-else{
-    alert("Try Again!")
-}
-//Task 20 --->
-var _firstNumber = +prompt("Please enter the first number: ", "5");
-var _secondNumber = +prompt("Please enter the second number:", "10");
-if(_firstNumber > _secondNumber){
-    alert("The greater number of " + _firstNumber + " and " + _secondNumber + " is " + _firstNumber);
-}
-else if(_secondNumber > _firstNumber){
-    alert("The greater number of " + _firstNumber + " and " + _secondNumber + " is " + _secondNumber);    
-}
-else if(_firstNumber == _secondNumber){
-    alert("Both the numbers are equal");
-}
-else{
-    alert("Please enter the correct input");
-}
-//Task 21 --->
-var languageCode = prompt("Please enter the language code: (en = English, fr = French, sp = Spanish )", "en");
-if (languageCode == "en"){
-    alert("Hello Wrold!");
-}
-else if(languageCode == "fr"){
-    alert("Bonjour le monde!");
-}
-else if(languageCode == "sp"){
-    alert("Hola Mundo!");
-}
-else{
-    alert("Please enter the correct input")
-}
-//Task 22 --->
-var pnNumber = prompt("Please enter a number to check whether it is posirive or negative: ","-1");
-if(pnNumber < 0.0){
-    alert( pnNumber + " is a negative number")
-}
-else if(pnNumber > 1){
-    alert(pnNumber + " is a positive number");
-}
-else{
-    alert("Try Again!")
-}
-//Task 23 --->
-var pluralizerNoun = prompt("Please enter a noun: ", "Cat");
-var pluralizerNumber = +prompt("Please enter a number", "4")
-alert(pluralizerNumber + " " + pluralizerNoun + "s");
